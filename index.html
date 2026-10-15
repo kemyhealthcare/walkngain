@@ -1,96 +1,187 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Walk n Gain – Preview</title><meta name="color-scheme" content="light dark">
+<title>Walk n Gain + KANTARA</title><meta name="color-scheme" content="light dark">
 <style>
 :root{--bg:#eef3f6;--sf:#fff;--tx:#10242c;--mu:#5d727b;--ac:#17606f;--co:#b87800;--ln:#cfdbe0;--er:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a1f;--sf:#15262d;--tx:#e6f0f3;--mu:#8fa6af;--ac:#4fb3c6;--co:#e8a317;--ln:#26404a;--er:#f2b8b5}}
 :root[data-theme="dark"]{--bg:#0d1a1f;--sf:#15262d;--tx:#e6f0f3;--mu:#8fa6af;--ac:#4fb3c6;--co:#e8a317;--ln:#26404a;--er:#f2b8b5}
-*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--tx);font-family:"Trebuchet MS",system-ui,sans-serif;padding:14px}
-.v{max-width:780px;margin:auto}.tabs,.top{display:flex;gap:6px;margin-bottom:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}.tabs{justify-content:flex-start}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--tx);font-family:"Trebuchet MS",system-ui,sans-serif;padding:12px}
+.v{max-width:900px;margin:auto}.top,.tabs,.hdr{display:flex;gap:6px;margin-bottom:10px;align-items:center;flex-wrap:wrap}.top{justify-content:space-between}
 button{background:var(--ac);color:var(--bg);border:0;border-radius:8px;padding:9px 12px;font:inherit;cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--co);outline-offset:2px}
-button.o{background:none;color:var(--ac);border:1px solid var(--ac)}button:disabled{opacity:.4;cursor:not-allowed}
-.phone{max-width:380px;margin:auto}.card{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px;margin-bottom:12px}
+button.o{background:none;color:var(--ac);border:1px solid var(--ac)}button:disabled{opacity:.4;cursor:not-allowed}button.l{background:none;color:var(--ac);padding:2px 4px;text-decoration:underline}
+.phone{max-width:400px;margin:auto}.card{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:14px;margin-bottom:12px}
 .big{font-size:44px;font-weight:700;line-height:1.1}.mu{color:var(--mu);font-size:13px}.er{color:var(--er);font-size:14px}.bar{height:10px;background:var(--ln);border-radius:5px;overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;background:var(--ac)}
-.bp{color:var(--co);font-weight:700}.row{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--ln)}.sim{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}.grid .card{margin:0}
-input,select{width:100%;padding:8px;margin:3px 0;border-radius:6px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);font:inherit}
+.bp{color:var(--co);font-weight:700}.row{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid var(--ln);align-items:center}.sim{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}.grid>.card{margin:0}
+input,select{width:100%;padding:9px;margin:3px 0;border-radius:6px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);font:inherit}input[type=radio],input[type=checkbox]{width:auto;margin:0 6px 0 0}
 .scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:6px;border-bottom:1px solid var(--ln)}
-.thumb{aspect-ratio:1;border-radius:8px;display:grid;place-items:center;font-size:40px;background:var(--bg);margin-bottom:6px}
-.acc{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:none;color:var(--tx);border:1px solid var(--ln);margin-bottom:8px}.g{width:28px;height:28px;border-radius:50%;background:#fff;color:#4285f4;font-weight:700;display:grid;place-items:center;flex:none}
-.tag{font-size:12px;border:1px solid var(--ln);border-radius:10px;padding:1px 8px}
-</style></head><body><div class="v" id="v"></div>
+.thumb{aspect-ratio:1.3;border-radius:8px;display:grid;place-items:center;font-size:46px;background:var(--bg);margin-bottom:6px;cursor:pointer}
+.tag{font-size:12px;border:1px solid var(--ln);border-radius:10px;padding:1px 8px}.acc{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:none;color:var(--tx);border:1px solid var(--ln);margin-bottom:8px}.g{width:28px;height:28px;border-radius:50%;background:#fff;color:#4285f4;font-weight:700;display:grid;place-items:center;flex:none}
+.logo{font-size:20px;color:var(--ac);cursor:pointer;letter-spacing:1px}.srch{flex:1;min-width:130px;margin:0}.ico{position:relative;background:none;color:var(--tx);border:1px solid var(--ln);padding:7px 10px;font-size:20px;line-height:1}
+.bdg{position:absolute;top:-7px;right:-7px;background:var(--co);color:#fff;border-radius:10px;font-size:11px;min-width:18px;padding:1px 4px;text-align:center}
+.star{color:var(--co)}.chips{display:flex;gap:6px;overflow-x:auto;margin-bottom:8px}.chips button{white-space:nowrap}
+.mbg{position:fixed;inset:0;background:rgba(0,0,0,.55);display:grid;place-items:center;z-index:50;padding:16px}.modal{background:var(--sf);border-radius:16px;padding:22px;max-width:340px;text-align:center}.me{font-size:56px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:20px;z-index:60;font-size:14px}
+.trk{display:flex;gap:4px;margin:8px 0}.trk span{flex:1;text-align:center;font-size:11px;color:var(--mu);border-top:4px solid var(--ln);padding-top:4px}.trk span.on{color:var(--ac);border-color:var(--ac)}
+.hd{cursor:pointer;background:none;border:0;color:var(--co);font-size:20px;padding:0 4px}
+</style></head><body><div class="v" id="v"></div><div id="m"></div>
 <script>
-const DAY=864e5,MIN=50,ADMINS=['admin@walkngain.com'],T0=Date.now();
-const DB={users:{
- 'priya@gmail.com':{name:'Priya Nair',steps:7400,credited:7,lots:[{bp:70,rem:70,exp:T0+20*DAY}],blocked:false},
- 'amit@gmail.com':{name:'Amit Verma',steps:12500,credited:12,lots:[{bp:400,rem:400,exp:T0+9*DAY},{bp:120,rem:120,exp:T0+25*DAY}],blocked:false}},
- prods:[{id:1,n:'Steel Water Bottle',e:'🧴',bp:300,st:12,d:'750 ml insulated bottle'},{id:2,n:'Running Socks (3 pack)',e:'🧦',bp:250,st:30,d:'Breathable, cushioned'},{id:3,n:'Yoga Mat',e:'🧘',bp:600,st:8,d:'6 mm non-slip mat'},{id:4,n:'Health Tracker Band',e:'⌚',bp:900,st:5,d:'Heart rate and sleep'}],orders:[]};
-const S={me:null,view:'app',cart:{},msg:'',tab:'prod',mot:false,err:''};
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const U=e=>DB.users[e||S.me],isAdmin=()=>!!S.me&&ADMINS.includes(S.me);
+const DAY=864e5,MIN=50,RATE=1,ADMINS=['admin@walkngain.com'],T0=Date.now();
+const STATES=['Andhra Pradesh','Assam','Bihar','Chandigarh','Chhattisgarh','Delhi','Goa','Gujarat','Haryana','Himachal Pradesh','Jammu and Kashmir','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Odisha','Punjab','Rajasthan','Tamil Nadu','Telangana','Uttar Pradesh','Uttarakhand','West Bengal','Other'];
+const CATS=['All','Fitness','Wear','Gadgets','Home'];
+const mk=(n,s,lots)=>({name:n,steps:s,credited:Math.floor(s/1000),lots,blocked:false,cart:{},wish:[],addrs:[],welcomed:s>=5000,spent:0});
+const DB={users:{'priya@gmail.com':mk('Priya Nair',7400,[{bp:70,rem:70,exp:T0+20*DAY}]),'amit@gmail.com':mk('Amit Verma',12500,[{bp:400,rem:400,exp:T0+9*DAY},{bp:120,rem:120,exp:T0+25*DAY}])},
+ ship:{cities:{mumbai:40,delhi:40,bengaluru:50,hyderabad:50,jaipur:60},def:80},
+ prods:[
+ {id:1,n:'Steel Water Bottle',e:'🧴',c:'Home',bp:150,st:12,r:4.4,rc:210,d:'750 ml insulated bottle, keeps drinks cold for 24 hours.',rev:[['Anita',5,'Keeps water cold all day.'],['Karan',4,'Good build, slightly heavy.']]},
+ {id:2,n:'Running Socks (3 pack)',e:'🧦',c:'Wear',bp:120,st:30,r:4.1,rc:88,d:'Breathable cushioned socks for long walks.',rev:[['Meena',4,'Comfortable and no blisters.']]},
+ {id:3,n:'Yoga Mat',e:'🧘',c:'Fitness',bp:300,st:8,r:4.6,rc:340,d:'6 mm non-slip mat with carry strap.',rev:[['Ravi',5,'Great grip.'],['Sunita',4,'Good thickness.']]},
+ {id:4,n:'Health Tracker Band',e:'⌚',c:'Gadgets',bp:900,st:5,r:4.2,rc:156,d:'Heart rate, sleep and step tracking with 10-day battery.',rev:[['Dev',4,'Accurate step count.']]},
+ {id:5,n:'Resistance Bands Set',e:'🎽',c:'Fitness',bp:180,st:20,r:4.3,rc:97,d:'Five resistance levels with a door anchor.',rev:[]},
+ {id:6,n:'Sports Cap',e:'🧢',c:'Wear',bp:100,st:3,r:3.9,rc:41,d:'Light quick-dry cap with adjustable strap.',rev:[]},
+ {id:7,n:'Protein Shaker',e:'🥤',c:'Fitness',bp:140,st:15,r:4.0,rc:63,d:'600 ml leak-proof shaker with mixing ball.',rev:[]},
+ {id:8,n:'Skipping Rope',e:'🪢',c:'Fitness',bp:90,st:0,r:4.2,rc:120,d:'Adjustable speed rope with foam handles.',rev:[]}],orders:[]};
+const S={me:null,view:'app',sv:'shop',pid:null,qty:1,msg:'',tab:'prod',err:'',mot:false,q:[],search:'',cat:'All',sort:'rel',instock:false,co:null,toast:'',dc:'mumbai',last:null};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=n=>'₹'+n,stars=r=>'★'.repeat(Math.round(r))+'☆'.repeat(5-Math.round(r)),cap=s=>s.replace(/\b\w/g,c=>c.toUpperCase());
+const CART='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"/></svg>';
+const U=e=>DB.users[e||S.me],isAdmin=()=>!!S.me&&ADMINS.includes(S.me),P=id=>DB.prods.find(p=>p.id==id);
 const live=u=>u.lots.filter(l=>l.exp>Date.now()&&l.rem>0),bal=u=>live(u).reduce((a,l)=>a+l.rem,0),next=u=>live(u).reduce((m,l)=>Math.min(m,l.exp),Infinity);
 const fd=t=>new Date(t).toLocaleDateString(undefined,{day:'numeric',month:'short'});
-function walk(n,e){const u=U(e),b0=u.credited;u.steps+=n;const b=Math.floor(u.steps/1000);if(b>u.credited){const g=(b-u.credited)*10;u.lots.push({bp:g,rem:g,exp:Date.now()+30*DAY});u.credited=b}return u.credited>b0}
+const shipFor=c=>{const k=String(c||'').trim().toLowerCase();return k in DB.ship.cities?DB.ship.cities[k]:DB.ship.def};
+const locked=()=>bal(U())<MIN,cartN=u=>Object.values(u.cart).reduce((a,b)=>a+b,0);
+function toast(t){S.toast=t;draw();setTimeout(()=>{S.toast='';draw()},1700)}
+function walk(n,e){const u=U(e);u.steps+=n;const b=Math.floor(u.steps/1000);let c=0;
+ if(b>u.credited){c=b-u.credited;u.lots.push({bp:c*10,rem:c*10,exp:Date.now()+30*DAY});u.credited=b;
+  if(!e||e===S.me){S.q.push({e:'🎉',t:'Congratulations!',b:'You walked '+b*1000+' steps and earned '+c*10+' BP.'});
+   if(u.steps>=5000&&!u.welcomed){u.welcomed=true;S.q.push({e:'🛍️',t:'Welcome to KANTARA!',b:'You reached 5,000 steps and unlocked the KANTARA store. You can now buy products with your BP points. Open the store from your wallet.'})}}}return c}
+function step(n){if(!S.me)return;const c=walk(n);if(c)draw();else if(S.view=='app')paint()}
 function login(email,name){email=email.trim().toLowerCase();if(!/^\S+@\S+\.\S+$/.test(email)){S.err='Enter a valid Gmail address.';return draw()}
  if(DB.users[email]&&DB.users[email].blocked){S.err='This account is blocked by the admin.';return draw()}
- if(!DB.users[email])DB.users[email]={name:name||email.split('@')[0],steps:0,credited:0,lots:[],blocked:false};
- Object.assign(S,{me:email,view:'app',err:'',msg:'',cart:{}});draw()}
+ if(!DB.users[email])DB.users[email]=mk(name||email.split('@')[0],0,[]);Object.assign(S,{me:email,view:'app',sv:'shop',err:'',msg:'',q:[],co:null});draw()}
 function logout(){stopMotion();S.me=null;S.view='app';draw()}
-const locked=()=>bal(U())<MIN;
 function go(v){S.msg='';if(v=='store'&&locked()){S.msg='KANTARA unlocks at '+MIN+' BP.';v='app'}S.view=v;draw()}
-function add(id){S.cart[id]=(S.cart[id]||0)+1;S.msg='';draw()}
-const total=()=>Object.entries(S.cart).reduce((t,[i,q])=>t+DB.prods.find(p=>p.id==i).bp*q,0);
-function buy(){const u=U(),t=total(),a=document.getElementById('addr').value.trim();
- if(!a)S.msg='Enter a delivery address.';else if(bal(u)<MIN)S.msg='You need at least '+MIN+' BP to shop.';else if(bal(u)<t)S.msg='Not enough BP for this cart.';
- else{let left=t;live(u).sort((x,y)=>x.exp-y.exp).forEach(l=>{const k=Math.min(left,l.rem);l.rem-=k;left-=k});
-  const items=Object.entries(S.cart).map(([i,q])=>{const p=DB.prods.find(p=>p.id==i);p.st-=q;return p.n+' ×'+q});
-  DB.orders.unshift({id:'KN'+(1001+DB.orders.length),email:S.me,items,bp:t,addr:a,status:'PLACED'});u.spent=(u.spent||0)+t;S.cart={};S.msg='Order placed. '+t+' BP used.'}draw()}
-const setSt=(i,v)=>{DB.orders[i].status=v};
-function saveProd(){const g=id=>document.getElementById(id).value;if(!g('pn')||!(+g('pb')>0))return;DB.prods.push({id:Date.now(),n:g('pn'),e:'🎁',bp:+g('pb'),st:+g('ps')||0,d:g('pd')});draw()}
-const stock=(id,d)=>{const p=DB.prods.find(p=>p.id==id);p.st=Math.max(0,p.st+d);draw()};
-const delProd=id=>{DB.prods=DB.prods.filter(p=>p.id!=id);draw()};
-const adj=(e,n)=>{const u=U(e);if(n>0)u.lots.push({bp:n,rem:n,exp:Date.now()+30*DAY});else{let l=-n;live(u).sort((a,b)=>a.exp-b.exp).forEach(x=>{const k=Math.min(l,x.rem);x.rem-=k;l-=k})}draw()};
-const blk=e=>{U(e).blocked=!U(e).blocked;draw()};
-const tab=t=>{S.tab=t;draw()};
-function loginV(){return `<div class="phone"><div class="card"><h2 style="margin:0 0 4px">Walk n Gain</h2><div class="mu">Walk. Earn BP. Shop at KANTARA.</div></div>
-<div class="card"><b>Choose a Google account</b><div class="mu" style="margin-bottom:10px">Simulated Google picker for this preview.</div>
-<button class="acc" onclick="login('rahul.sharma@gmail.com','Rahul Sharma')"><span class="g">G</span><span>Rahul Sharma<br><span class="mu">rahul.sharma@gmail.com</span></span></button>
-<button class="acc" onclick="login('admin@walkngain.com','Store Admin')"><span class="g">G</span><span>Store Admin <span class="tag">admin</span><br><span class="mu">admin@walkngain.com</span></span></button>
-<button class="acc" onclick="login('priya@gmail.com','Priya Nair')"><span class="g">G</span><span>Priya Nair<br><span class="mu">priya@gmail.com</span></span></button>
-<input id="em" placeholder="Or type another Gmail address" aria-label="Gmail address"><button onclick="login(document.getElementById('em').value)">Continue with Google</button>
-<div class="er" role="alert">${esc(S.err)}</div></div><div class="mu">Only accounts on the admin list see the Admin tab. Everyone else only sees the app and the store.</div></div>`}
+function sv(v){S.sv=v;if(v=='shop')S.co=null;draw();scrollTo(0,0)}
+function addc(id,q){const u=U(),p=P(id);if(p.st<1)return;u.cart[id]=Math.min(p.st,(u.cart[id]||0)+(q||1));toast('Added to cart')}
+function setq(id,d){const u=U(),p=P(id),n=(u.cart[id]||0)+d;if(n<1)delete u.cart[id];else u.cart[id]=Math.min(p.st,n);draw()}
+function remc(id){delete U().cart[id];draw()}
+function wish(id){const w=U().wish,i=w.indexOf(id);i<0?w.push(id):w.splice(i,1);draw()}
+function buyNow(id){const p=P(id);if(p.st<1)return;U().cart={[id]:1};startCo()}
+function quote(a){const u=U(),items=Object.entries(u.cart).map(([i,q])=>({p:P(i),q})).filter(x=>x.p),tot=items.reduce((s,x)=>s+x.p.bp*x.q,0),b=bal(u),used=Math.min(b,tot),rs=(tot-used)*RATE,ship=a?shipFor(a.city):0;return{items,tot,used,rs,ship,due:rs+ship,b}}
+function startCo(){const u=U();if(!Object.keys(u.cart).length)return;S.co={step:1,addr:u.addrs[0]||null,f:{},pay:'upi',upi:'',err:'',busy:false,save:true,newA:!u.addrs.length};S.sv='co';draw();scrollTo(0,0)}
+function saveAddr(){const c=S.co,f=c.f;const need=['name','phone','line1','city','state','pin'];
+ if(need.some(k=>!(f[k]||'').trim())){c.err='Please fill name, phone, address, city, state and pincode.';return draw()}
+ if(!/^[6-9]\d{9}$/.test(f.phone.trim())){c.err='Enter a valid 10-digit mobile number.';return draw()}
+ if(!/^[1-9]\d{5}$/.test(f.pin.trim())){c.err='Enter a valid 6-digit pincode.';return draw()}
+ c.addr={name:f.name.trim(),phone:f.phone.trim(),line1:f.line1.trim(),line2:(f.line2||'').trim(),city:f.city.trim(),state:f.state,pin:f.pin.trim()};c.step=2;c.err='';draw()}
+function pay(){const c=S.co,q=quote(c.addr);if(q.due<=0)return place('BP only','');
+ if(c.pay=='upi'&&!/^[\w.\-]{2,}@[a-zA-Z]{2,}$/.test(c.upi.trim())){c.err='Enter a valid UPI ID, for example name@upi';return draw()}
+ c.err='';c.busy=true;draw();setTimeout(()=>place(c.pay.toUpperCase(),'DEMO'+String(Date.now()).slice(-8)),1300)}
+function place(method,txn){if(!S.co||!S.me)return;const u=U(),a=S.co.addr,q=quote(a);
+ for(const x of q.items)if(x.p.st<x.q){S.co.err=x.p.n+': only '+x.p.st+' left.';S.co.busy=false;return draw()}
+ let left=q.used;live(u).sort((x,y)=>x.exp-y.exp).forEach(l=>{const k=Math.min(left,l.rem);l.rem-=k;left-=k});
+ q.items.forEach(x=>x.p.st-=x.q);u.spent=(u.spent||0)+q.used;
+ if(S.co.save&&!u.addrs.some(z=>z.line1==a.line1&&z.pin==a.pin))u.addrs.push(a);
+ const o={id:'KN'+(1001+DB.orders.length),email:S.me,t:Date.now(),items:q.items.map(x=>({n:x.p.n,e:x.p.e,q:x.q,bp:x.p.bp})),totalBP:q.tot,bpUsed:q.used,payINR:q.rs,ship:q.ship,paid:q.due,method,txn,addr:a,status:'PLACED'};
+ DB.orders.unshift(o);u.cart={};S.last=o;S.sv='done';S.co=null;draw()}
+function cancelOrder(id){const o=DB.orders.find(x=>x.id==id);if(!o||o.status!='PLACED')return;o.status='CANCELLED';const u=U(o.email);
+ if(o.bpUsed)u.lots.push({bp:o.bpUsed,rem:o.bpUsed,exp:Date.now()+30*DAY});o.items.forEach(i=>{const p=DB.prods.find(p=>p.n==i.n);if(p)p.st+=i.q});toast('Order cancelled. BP returned; '+money(o.paid)+' refunds to your payment method.')}
+function stars_(p){return `<span class="star" aria-label="${p.r} out of 5">${stars(p.r)}</span> <span class="mu">${p.r} (${p.rc})</span>`}
+function card(p){const u=U(),w=u.wish.includes(p.id);return `<div class="card"><div class="thumb" onclick="S.pid=${p.id};S.qty=1;sv('pdp')" role="button" aria-label="View ${esc(p.n)}">${p.e}</div>
+<button class="hd" style="float:right;margin-top:-52px;position:relative" aria-pressed="${w}" aria-label="Wishlist" onclick="wish(${p.id})">${w?'♥':'♡'}</button>
+<b>${esc(p.n)}</b><div>${stars_(p)}</div><div><span class="bp">${p.bp} BP</span> <span class="mu">≈ ${money(p.bp*RATE)}</span></div>
+<div class="${p.st<1?'er':'mu'}">${p.st<1?'Out of stock':p.st<6?'Only '+p.st+' left':'In stock'}</div>
+<div class="sim"><button ${p.st<1?'disabled':''} onclick="addc(${p.id})">Add to cart</button><button class="o" ${p.st<1?'disabled':''} onclick="buyNow(${p.id})">Buy now</button></div></div>`}
+function gridH(){const q=S.search.trim().toLowerCase();let a=DB.prods.filter(p=>(S.cat=='All'||p.c==S.cat)&&(!q||(p.n+' '+p.d).toLowerCase().includes(q))&&(!S.instock||p.st>0));
+ if(S.sort=='lo')a.sort((x,y)=>x.bp-y.bp);if(S.sort=='hi')a.sort((x,y)=>y.bp-x.bp);if(S.sort=='rt')a.sort((x,y)=>y.r-x.r);
+ return a.length?a.map(card).join(''):'<div class="mu">No products match your search.</div>'}
+function ref(){document.getElementById('grid').innerHTML=gridH()}
+function storeV(){const u=U(),b=bal(u);
+ const hdr=`<div class="hdr"><b class="logo" onclick="sv('shop')">KANTARA</b><input class="srch" id="srch" placeholder="Search products" aria-label="Search products" value="${esc(S.search)}" oninput="S.search=this.value;if(S.sv=='shop')ref();else sv('shop')">
+<button class="ico" aria-label="Wishlist (${u.wish.length})" onclick="sv('wish')">♡${u.wish.length?`<span class="bdg">${u.wish.length}</span>`:''}</button>
+<button class="ico" aria-label="Cart (${cartN(u)})" onclick="sv('cart')">${CART}${cartN(u)?`<span class="bdg">${cartN(u)}</span>`:''}</button><button class="o" onclick="sv('orders')">Orders</button></div>
+<div class="mu" style="margin-bottom:10px"><span class="bp">${b} BP</span> available · 1 BP = ${money(RATE)} if you pay the balance online</div>`;
+ return hdr+({shop:shopV,pdp:pdpV,cart:cartV,co:coV,orders:ordersV,wish:wishV,done:doneV}[S.sv]||shopV)()}
+function shopV(){return `<div class="chips">${CATS.map(c=>`<button class="${S.cat==c?'':'o'}" onclick="S.cat='${c}';draw()">${c}</button>`).join('')}</div>
+<div class="sim"><select style="width:auto" aria-label="Sort" onchange="S.sort=this.value;ref()"><option value="rel">Sort: Relevance</option><option value="lo" ${S.sort=='lo'?'selected':''}>BP: low to high</option><option value="hi" ${S.sort=='hi'?'selected':''}>BP: high to low</option><option value="rt" ${S.sort=='rt'?'selected':''}>Rating</option></select>
+<label><input type="checkbox" ${S.instock?'checked':''} onchange="S.instock=this.checked;ref()">In stock only</label></div><div class="grid" id="grid">${gridH()}</div>`}
+function wishV(){const a=U().wish.map(P).filter(Boolean);return `<h3>Wishlist</h3>`+(a.length?`<div class="grid">${a.map(card).join('')}</div>`:'<div class="mu">Your wishlist is empty.</div>')}
+function pdpV(){const p=P(S.pid);if(!p)return shopV();const ch=shipFor(S.dc);
+ return `<button class="l" onclick="sv('shop')">‹ Back to products</button><div class="card"><div class="thumb" style="font-size:90px;cursor:default">${p.e}</div><h2 style="margin:4px 0">${esc(p.n)}</h2><div>${stars_(p)}</div>
+<div style="margin:8px 0"><span class="bp" style="font-size:24px">${p.bp} BP</span> <span class="mu">≈ ${money(p.bp*RATE)} · ${p.c}</span></div><p>${esc(p.d)}</p>
+<div class="mu">Deliver to <select style="width:auto" aria-label="City" onchange="S.dc=this.value;draw()">${Object.keys(DB.ship.cities).map(c=>`<option value="${c}" ${S.dc==c?'selected':''}>${cap(c)}</option>`).join('')}<option value="other" ${S.dc=='other'?'selected':''}>Other city</option></select> · delivery ${ch?money(ch):'free'} · 3 to 6 days</div>
+<div class="sim"><button ${p.st<1?'disabled':''} onclick="addc(${p.id})">Add to cart</button><button class="o" ${p.st<1?'disabled':''} onclick="buyNow(${p.id})">Buy now</button><button class="o" onclick="wish(${p.id})">${U().wish.includes(p.id)?'♥ Wishlisted':'♡ Wishlist'}</button></div></div>
+<div class="card"><b>Reviews</b>${p.rev.length?p.rev.map(r=>`<div class="row"><span><span class="star">${stars(r[1])}</span> ${esc(r[0])}<br><span class="mu">${esc(r[2])}</span></span></div>`).join(''):'<div class="mu">No reviews yet.</div>'}</div>`}
+function cartV(){const u=U(),q=quote();if(!q.items.length)return `<div class="card">Your cart is empty.<br><br><button onclick="sv('shop')">Continue shopping</button></div>`;
+ return `<div class="card"><b>Cart (${cartN(u)} items)</b>${q.items.map(({p,q:n})=>`<div class="row"><span>${p.e} ${esc(p.n)}<br><span class="bp">${p.bp} BP</span></span><span><button class="o" onclick="setq(${p.id},-1)" aria-label="Less">−</button> ${n} <button class="o" onclick="setq(${p.id},1)" aria-label="More">+</button> <button class="l" onclick="remc(${p.id})">Remove</button></span></div>`).join('')}
+<div class="row"><span>Items total</span><b class="bp">${q.tot} BP</b></div><div class="row"><span>Your BP used</span><span>${q.used} BP</span></div>
+<div class="row"><span>Balance paid online (1 BP = ${money(RATE)})</span><span>${money(q.rs)}</span></div><div class="mu">Delivery charge is added at checkout based on your city.</div><br><button onclick="startCo()">Proceed to checkout</button></div>`}
+function coV(){const c=S.co,u=U();if(!c)return shopV();
+ const stp=`<div class="mu">Step ${c.step} of 2: ${c.step==1?'Delivery address':'Payment'}</div>`;
+ if(c.step==1){if(!c.newA)return stp+`<div class="card"><b>Choose delivery address</b>${u.addrs.map((a,i)=>`<div class="row"><label><input type="radio" name="ad" ${c.addr===a?'checked':''} onchange="S.co.addr=U().addrs[${i}]"> ${esc(a.name)}, ${esc(a.line1)}, ${esc(a.city)}, ${esc(a.state)} ${esc(a.pin)} · ${esc(a.phone)}</label></div>`).join('')}
+<div class="sim"><button onclick="S.co.step=2;draw()">Deliver here</button><button class="o" onclick="S.co.newA=true;S.co.addr=null;draw()">Add new address</button></div></div>`;
+  const f=c.f,i=(k,l,t)=>`<label class="mu">${l}</label><input ${t||''} value="${esc(f[k]||'')}" oninput="S.co.f.${k}=this.value" aria-label="${l}">`;
+  return stp+`<div class="card"><b>Delivery details</b>${i('name','Full name')}${i('phone','Mobile number (10 digits)','inputmode="numeric" maxlength="10"')}${i('line1','House no, building, street')}${i('line2','Area, landmark (optional)')}
+<label class="mu">City</label><input list="cl" value="${esc(f.city||'')}" oninput="S.co.f.city=this.value" aria-label="City"><datalist id="cl">${Object.keys(DB.ship.cities).map(k=>`<option value="${cap(k)}">`).join('')}</datalist>
+<label class="mu">State</label><select onchange="S.co.f.state=this.value" aria-label="State"><option value="">Select state</option>${STATES.map(s=>`<option ${f.state==s?'selected':''}>${s}</option>`).join('')}</select>${i('pin','Pincode (6 digits)','inputmode="numeric" maxlength="6"')}
+<label><input type="checkbox" ${c.save?'checked':''} onchange="S.co.save=this.checked"> Save this address</label><div class="er" role="alert">${esc(c.err)}</div><button onclick="saveAddr()">Save and continue</button> ${u.addrs.length?'<button class="o" onclick="S.co.newA=false;S.co.addr=U().addrs[0];draw()">Cancel</button>':''}</div>`}
+ const a=c.addr,q=quote(a);
+ return stp+`<div class="card"><b>Deliver to</b> <button class="l" onclick="S.co.step=1;draw()">Change</button><div class="mu">${esc(a.name)}, ${esc(a.line1)}${a.line2?', '+esc(a.line2):''}, ${esc(a.city)}, ${esc(a.state)} ${esc(a.pin)} · ${esc(a.phone)}</div></div>
+<div class="card"><b>Price details</b>${q.items.map(x=>`<div class="row"><span>${x.p.e} ${esc(x.p.n)} ×${x.q}</span><span>${x.p.bp*x.q} BP</span></div>`).join('')}
+<div class="row"><span>BP applied from wallet</span><b class="bp">${q.used} BP</b></div><div class="row"><span>Remaining ${q.tot-q.used} BP paid in rupees</span><span>${money(q.rs)}</span></div>
+<div class="row"><span>Delivery to ${esc(a.city)}</span><span>${q.ship?money(q.ship):'Free'}</span></div><div class="row"><b>Amount to pay now</b><b>${money(q.due)}</b></div></div>
+${q.due>0?`<div class="card"><b>Payment method</b>${[['upi','UPI (Google Pay, PhonePe, Paytm)'],['card','Credit or debit card'],['net','Net banking']].map(([k,l])=>`<div class="row"><label><input type="radio" name="pm" ${c.pay==k?'checked':''} onchange="S.co.pay='${k}';draw()">${l}</label></div>`).join('')}
+${c.pay=='upi'?`<input placeholder="Enter UPI ID, e.g. name@upi" value="${esc(c.upi)}" oninput="S.co.upi=this.value" aria-label="UPI ID">`:'<div class="mu">The secure gateway page opens here in the real app.</div>'}
+<div class="mu">Demo mode: no real money moves. The real store uses a payment gateway.</div></div>`:'<div class="card mu">Your BP covers everything and delivery is free, so no payment is needed.</div>'}
+<div class="er" role="alert">${esc(c.err)}</div><button ${c.busy?'disabled':''} onclick="pay()">${c.busy?'Processing payment…':q.due>0?'Pay '+money(q.due)+' and place order':'Place order'}</button>`}
+function doneV(){const o=S.last;if(!o)return shopV();return `<div class="card" style="text-align:center"><div class="me">✅</div><h2>Order placed</h2><div>Order ${o.id} · ${o.items.map(i=>esc(i.n)+' ×'+i.q).join(', ')}</div><div class="mu">${o.bpUsed} BP used · ${money(o.paid)} paid${o.txn?' · ref '+o.txn:''}</div><br><button onclick="sv('orders')">Track order</button> <button class="o" onclick="sv('shop')">Continue shopping</button></div>`}
+function ordersV(){const a=DB.orders.filter(o=>o.email==S.me),S4=['PLACED','CONFIRMED','SHIPPED','DELIVERED'];
+ return `<h3>My orders</h3>`+(a.length?a.map(o=>{const i=S4.indexOf(o.status);return `<div class="card"><b>${o.id}</b> <span class="mu">${new Date(o.t).toLocaleDateString()}</span> <span class="tag">${o.status}</span>
+<div>${o.items.map(x=>x.e+' '+esc(x.n)+' ×'+x.q).join('<br>')}</div>${o.status=='CANCELLED'?'':`<div class="trk">${S4.map((s,k)=>`<span class="${k<=i?'on':''}">${s.charAt(0)+s.slice(1).toLowerCase()}</span>`).join('')}</div>`}
+<div class="mu">${o.bpUsed} BP + ${money(o.payINR)} balance + ${o.ship?money(o.ship):'free'} delivery = ${money(o.paid)} paid (${o.method})<br>Ship to: ${esc(o.addr.name)}, ${esc(o.addr.line1)}, ${esc(o.addr.city)}, ${esc(o.addr.state)} ${esc(o.addr.pin)}</div>
+${o.status=='PLACED'?`<button class="o" onclick="cancelOrder('${o.id}')">Cancel order</button>`:''}</div>`}).join(''):'<div class="mu">No orders yet.</div>')}
 function appV(){const u=U(),b=bal(u),n=next(u),ea=u.lots.reduce((a,l)=>a+l.bp,0),ex=u.lots.filter(l=>l.exp<=Date.now()).reduce((a,l)=>a+l.rem,0),sp=u.spent||0;
-const bd=[['First 1,000 steps',u.steps>=1000],['10,000-step day',u.steps>=10000],['KANTARA unlocked ('+MIN+' BP)',ea>=MIN],['First purchase',sp>0]];
+const bd=[['First 1,000 steps',u.steps>=1000],['5,000 steps: KANTARA entitled',u.steps>=5000],['10,000-step day',u.steps>=10000],['First purchase',sp>0]];
 return `<div class="phone"><div class="card"><div class="mu">Today</div><div class="big" id="st">${u.steps.toLocaleString()}</div><div class="bar"><i id="bar" style="width:${Math.min(100,u.steps/100)}%"></i></div>
 <div class="mu" id="nx">Goal 10,000 · next +10 BP at ${(Math.floor(u.steps/1000)+1)*1000}</div>
-<div class="sim"><button onclick="step(1)">Take a step</button><button class="o" onclick="step(10)">Walk 10 steps</button><button class="o" onclick="motion()">${S.mot?'Stop phone sensor':'Use phone motion sensor'}</button></div>
-<div class="mu">Steps count only when you walk. The real app reads the phone's step sensor; here, tap the button for each step or turn on the motion sensor on a phone.</div><div class="er" role="status">${esc(S.msg)}</div>${S.mot?`<div class="mu" id="dg">Waiting for sensor data… threshold ${sens.toFixed(1)}</div><div class="sim"><button class="o" onclick="sens=Math.max(.4,sens-.3);draw()">More sensitive</button><button class="o" onclick="sens+=.3;draw()">Less sensitive</button></div>`:''}</div>
+<div class="sim"><button onclick="step(1)">Take a step</button><button class="o" onclick="motion()">${S.mot?'Stop phone sensor':'Use phone motion sensor'}</button></div>
+<div class="mu">BP is earned only by walking: 10 BP for every 1,000 steps. Walk with the motion sensor on, or tap "Take a step" for each step.</div><div class="er" role="status">${esc(S.msg)}</div>${S.mot?`<div class="mu" id="dg">Waiting for sensor data… threshold ${sens.toFixed(1)}</div><div class="sim"><button class="o" onclick="sens=Math.max(.4,sens-.3);draw()">More sensitive</button><button class="o" onclick="sens+=.3;draw()">Less sensitive</button></div>`:''}</div>
 <div class="card"><div class="mu">BP wallet</div><div class="big bp">${b} BP</div>${n<Infinity?`<div class="mu">Oldest points expire ${fd(n)}</div>`:''}
-<div class="mu">${b>=MIN?'KANTARA store unlocked':'Collect '+(MIN-b)+' more BP to unlock the KANTARA store (minimum '+MIN+' BP)'}</div><br>
+<div class="mu">${b>=MIN?'KANTARA store unlocked':'Collect '+(MIN-b)+' more BP (about '+(MIN-b)*100+' steps) to unlock the KANTARA store'}</div><br>
 <button ${b>=MIN?'':'disabled'} onclick="go('store')">${b>=MIN?'Open KANTARA store':'KANTARA store (locked)'}</button>
 <button class="o" style="margin-top:8px" onclick="U().lots.forEach(l=>l.exp-=31*DAY);draw()">Fast-forward 31 days (test expiry)</button></div>
 <div class="card"><b>Achievements</b><div class="row"><span>BP earned</span><span>${ea}</span></div><div class="row"><span>BP spent</span><span>${sp}</span></div><div class="row"><span>BP expired</span><span>${ex}</span></div>
 <div class="sim">${bd.map(([l,ok])=>`<span class="tag" style="${ok?'border-color:var(--ac);color:var(--ac)':''}">${ok?'✓ ':'○ '}${l}</span>`).join('')}</div></div></div>`}
-function storeV(){const u=U(),b=bal(u),t=total(),c=Object.entries(S.cart);
-return `<div class="card"><h2 style="margin:0">KANTARA</h2><span class="bp">${b} BP</span> available${b<MIN?`<div class="mu">Shopping unlocks at ${MIN} BP. Walk in the app to earn more.</div>`:''}</div>
-<div class="grid">${DB.prods.map(p=>`<div class="card"><div class="thumb">${p.e}</div><b>${esc(p.n)}</b><div class="mu">${esc(p.d)}</div><div><span class="bp">${p.bp} BP</span> <span class="mu">${p.st} left</span></div><button ${p.st>0?'':'disabled'} onclick="add(${p.id})" style="margin-top:6px">Add to cart</button></div>`).join('')}</div>
-<div class="card" style="margin-top:12px"><b>Cart</b>${c.length?c.map(([i,q])=>{const p=DB.prods.find(p=>p.id==i);return `<div class="row"><span>${esc(p.n)} ×${q}</span><span>${p.bp*q} BP</span></div>`}).join('')+`<div class="row"><b>Total</b><b class="bp">${t} BP</b></div><input id="addr" placeholder="Delivery address"><button onclick="buy()" ${b>=MIN&&t<=b?'':'disabled'}>Place order with BP</button>`:'<div class="mu">Your cart is empty.</div>'}<div class="mu" role="status">${S.msg}</div></div>`}
-function adminV(){const us=Object.entries(DB.users),o=DB.orders;
-const kp=`<div class="grid" style="margin-bottom:12px"><div class="card"><div class="mu">Users</div><b>${us.length}</b></div><div class="card"><div class="mu">Total steps</div><b>${us.reduce((a,[,u])=>a+u.steps,0).toLocaleString()}</b></div><div class="card"><div class="mu">Active BP</div><b>${us.reduce((a,[,u])=>a+bal(u),0)}</b></div><div class="card"><div class="mu">New orders</div><b>${o.filter(x=>x.status=='PLACED').length}</b></div></div>`;
-const nav=`<div class="sim">${[['prod','Store products'],['ord','Orders ('+o.length+')'],['usr','Users ('+us.length+')']].map(([k,l])=>`<button class="${S.tab==k?'':'o'}" onclick="tab('${k}')">${l}</button>`).join('')}</div>`;
-if(S.tab=='prod')return kp+nav+`<div class="card"><b>Add product</b><input id="pn" placeholder="Name"><input id="pd" placeholder="Description"><input id="pb" type="number" placeholder="Price in BP"><input id="ps" type="number" placeholder="Stock"><button onclick="saveProd()">Save product</button></div><div class="card scroll"><table><tr><th>Product</th><th>BP</th><th>Stock</th><th></th></tr>${DB.prods.map(p=>`<tr><td>${p.e} ${esc(p.n)}</td><td>${p.bp}</td><td>${p.st}</td><td><button class="o" onclick="stock(${p.id},-1)" aria-label="Decrease stock">−</button> <button class="o" onclick="stock(${p.id},1)" aria-label="Increase stock">+</button> <button class="o" onclick="delProd(${p.id})">Delete</button></td></tr>`).join('')}</table></div>`;
-if(S.tab=='ord')return kp+nav+`<div class="card scroll">${o.length?`<table><tr><th>Order</th><th>Customer</th><th>Items</th><th>BP</th><th>Ship to</th><th>Status</th></tr>${o.map((x,i)=>`<tr><td>${x.id}</td><td>${esc(x.email)}</td><td>${x.items.map(esc).join(', ')}</td><td>${x.bp}</td><td>${esc(x.addr)}</td><td><select onchange="setSt(${i},this.value)">${['PLACED','CONFIRMED','SHIPPED','DELIVERED','CANCELLED'].map(s=>`<option ${s==x.status?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('')}</table>`:'<div class="mu">No orders yet. Sign in as a user with 500+ BP and place one from KANTARA.</div>'}</div>`;
+function adminV(){const us=Object.entries(DB.users),o=DB.orders,g=id=>document.getElementById(id)?.value;
+const kp=`<div class="grid" style="margin-bottom:12px"><div class="card"><div class="mu">Users</div><b>${us.length}</b></div><div class="card"><div class="mu">Total steps</div><b>${us.reduce((a,[,u])=>a+u.steps,0).toLocaleString()}</b></div><div class="card"><div class="mu">Active BP</div><b>${us.reduce((a,[,u])=>a+bal(u),0)}</b></div><div class="card"><div class="mu">New orders</div><b>${o.filter(x=>x.status=='PLACED').length}</b></div><div class="card"><div class="mu">Rupees collected</div><b>${money(o.filter(x=>x.status!='CANCELLED').reduce((a,x)=>a+x.paid,0))}</b></div></div>`;
+const nav=`<div class="sim">${[['prod','Store products'],['ship','Delivery charges'],['ord','Orders ('+o.length+')'],['usr','Users ('+us.length+')']].map(([k,l])=>`<button class="${S.tab==k?'':'o'}" onclick="S.tab='${k}';draw()">${l}</button>`).join('')}</div>`;
+if(S.tab=='prod')return kp+nav+`<div class="card"><b>Add product (goes live in KANTARA instantly)</b><input id="pn" placeholder="Name"><input id="pe" placeholder="Emoji or icon, e.g. 🎒" maxlength="4"><select id="pc">${CATS.slice(1).map(c=>`<option>${c}</option>`).join('')}</select><input id="pd" placeholder="Description"><input id="pb" type="number" min="1" placeholder="Price in BP"><input id="ps" type="number" min="0" placeholder="Stock"><button onclick="saveProd()">Publish product</button></div>
+<div class="card scroll"><table><tr><th>Product</th><th>Category</th><th>BP</th><th>Stock</th><th></th></tr>${DB.prods.map(p=>`<tr><td>${p.e} ${esc(p.n)}</td><td>${p.c}</td><td>${p.bp}</td><td>${p.st}</td><td><button class="o" onclick="stock(${p.id},-1)" aria-label="Decrease stock">−</button> <button class="o" onclick="stock(${p.id},1)" aria-label="Increase stock">+</button> <button class="o" onclick="DB.prods=DB.prods.filter(x=>x.id!=${p.id});draw()">Delete</button></td></tr>`).join('')}</table></div>`;
+if(S.tab=='ship')return kp+nav+`<div class="card"><b>City-wise delivery charges (rupees)</b><table><tr><th>City</th><th>Charge</th><th></th></tr>${Object.entries(DB.ship.cities).map(([c,v])=>`<tr><td>${cap(c)}</td><td><input type="number" min="0" style="width:90px" value="${v}" onchange="DB.ship.cities['${esc(c)}']=Math.max(0,+this.value||0)"></td><td><button class="o" onclick="delete DB.ship.cities['${esc(c)}'];draw()">Remove</button></td></tr>`).join('')}
+<tr><td>All other cities</td><td><input type="number" min="0" style="width:90px" value="${DB.ship.def}" onchange="DB.ship.def=Math.max(0,+this.value||0)"></td><td></td></tr></table><div class="sim"><input id="sc" placeholder="New city" style="width:160px"><input id="sv" type="number" min="0" placeholder="₹" style="width:90px"><button onclick="addCity()">Add city</button></div><div class="mu">Set 0 for free delivery. Charges apply to every order at checkout.</div></div>`;
+if(S.tab=='ord')return kp+nav+`<div class="card scroll">${o.length?`<table><tr><th>Order</th><th>Customer</th><th>Items</th><th>Payment</th><th>Ship to</th><th>Status</th></tr>${o.map((x,i)=>`<tr><td>${x.id}</td><td>${esc(x.email)}</td><td>${x.items.map(y=>esc(y.n)+' ×'+y.q).join('<br>')}</td><td>${x.bpUsed} BP + ${money(x.paid)}<div class="mu">${x.method} ${x.txn}</div></td><td>${esc(x.addr.name)}, ${esc(x.addr.line1)}, ${esc(x.addr.city)}, ${esc(x.addr.state)} ${esc(x.addr.pin)}<br>${esc(x.addr.phone)}</td><td><select onchange="DB.orders[${i}].status=this.value">${['PLACED','CONFIRMED','SHIPPED','DELIVERED','CANCELLED'].map(s=>`<option ${s==x.status?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('')}</table>`:'<div class="mu">No orders yet. Sign in as Priya (70 BP) and place one from KANTARA.</div>'}</div>`;
 return kp+nav+`<div class="card scroll"><table><tr><th>User</th><th>Steps today</th><th>Active BP</th><th>Status</th><th>Manage</th></tr>${us.map(([e,u])=>`<tr><td>${esc(u.name)}<div class="mu">${esc(e)}</div></td><td>${u.steps.toLocaleString()}</td><td>${bal(u)}</td><td>${u.blocked?'<span class="er">Blocked</span>':'Active'}</td><td><button class="o" onclick="adj('${esc(e)}',50)">+50 BP</button> <button class="o" onclick="adj('${esc(e)}',-50)">−50 BP</button> <button class="o" onclick="blk('${esc(e)}')">${u.blocked?'Unblock':'Block'}</button></td></tr>`).join('')}</table></div>`}
-function draw(){const el=document.getElementById('v');if(!S.me){el.innerHTML=loginV();return}
+function saveProd(){const g=id=>document.getElementById(id).value.trim();if(!g('pn')||!(+g('pb')>0)){S.err='Name and BP price are required.';return}
+ DB.prods.unshift({id:Date.now(),n:g('pn'),e:g('pe')||'🎁',c:g('pc'),bp:+g('pb'),st:Math.max(0,+g('ps')||0),r:4,rc:0,d:g('pd'),rev:[]});toast('Product is live in the KANTARA store now')}
+const stock=(id,d)=>{const p=P(id);p.st=Math.max(0,p.st+d);draw()};
+function addCity(){const c=document.getElementById('sc').value.trim().toLowerCase(),v=+document.getElementById('sv').value;if(c&&v>=0){DB.ship.cities[c]=v;draw()}}
+const adj=(e,n)=>{const u=U(e);if(n>0)u.lots.push({bp:n,rem:n,exp:Date.now()+30*DAY});else{let l=-n;live(u).sort((a,b)=>a.exp-b.exp).forEach(x=>{const k=Math.min(l,x.rem);x.rem-=k;l-=k})}draw()};
+const blk=e=>{U(e).blocked=!U(e).blocked;draw()};
+function loginV(){return `<div class="phone"><div class="card"><h2 style="margin:0 0 4px">Walk n Gain</h2><div class="mu">Walk. Earn BP. Shop at KANTARA.</div></div>
+<div class="card"><b>Choose a Google account</b><div class="mu" style="margin-bottom:10px">Simulated Google picker for this preview. Priya already has 70 BP so you can test the store.</div>
+<button class="acc" onclick="login('rahul.sharma@gmail.com','Rahul Sharma')"><span class="g">G</span><span>Rahul Sharma<br><span class="mu">rahul.sharma@gmail.com</span></span></button>
+<button class="acc" onclick="login('priya@gmail.com','Priya Nair')"><span class="g">G</span><span>Priya Nair<br><span class="mu">priya@gmail.com</span></span></button>
+<button class="acc" onclick="login('admin@walkngain.com','Store Admin')"><span class="g">G</span><span>Store Admin <span class="tag">admin</span><br><span class="mu">admin@walkngain.com</span></span></button>
+<input id="em" placeholder="Or type another Gmail address" aria-label="Gmail address"><button onclick="login(document.getElementById('em').value)">Continue with Google</button><div class="er" role="alert">${esc(S.err)}</div></div></div>`}
+function draw(){const el=document.getElementById('v');if(!S.me){el.innerHTML=loginV();document.getElementById('m').innerHTML='';return}
  if(S.view=='admin'&&!isAdmin())S.view='app';if(S.view=='store'&&locked())S.view='app';const u=U();
  const tabs=[['app','Walk n Gain'],['store','KANTARA store']].concat(isAdmin()?[['admin','Admin panel']]:[]);
  el.innerHTML=`<div class="top"><span><b>${esc(u.name)}</b> <span class="mu">${esc(S.me)}</span>${isAdmin()?' <span class="tag">admin</span>':''}</span><button class="o" onclick="logout()">Log out</button></div>
- <div class="tabs">${tabs.map(([k,l])=>{const lk=k=='store'&&locked();return `<button class="${S.view==k?'':'o'}" ${lk?'disabled title="Unlocks at '+MIN+' BP"':''} onclick="go('${k}')">${l}${lk?' (locked)':''}</button>`}).join('')}</div>`+({app:appV,store:storeV,admin:adminV}[S.view])()}
+ <div class="tabs">${tabs.map(([k,l])=>{const lk=k=='store'&&locked();return `<button class="${S.view==k?'':'o'}" ${lk?'disabled':''} onclick="go('${k}')">${l}${lk?' (locked)':''}</button>`}).join('')}</div>`+({app:appV,store:storeV,admin:adminV}[S.view])();
+ const q=S.q[0];document.getElementById('m').innerHTML=(q?`<div class="mbg" role="dialog" aria-modal="true" aria-label="${esc(q.t)}"><div class="modal"><div class="me">${q.e}</div><h2>${esc(q.t)}</h2><p>${esc(q.b)}</p><button onclick="S.q.shift();draw()">${S.q.length>1?'Next':'Great'}</button></div></div>`:'')+(S.toast?`<div class="toast" role="status">${esc(S.toast)}</div>`:'')}
 function paint(){const u=U(),s=document.getElementById('st');if(!s)return;s.textContent=u.steps.toLocaleString();document.getElementById('bar').style.width=Math.min(100,u.steps/100)+'%';document.getElementById('nx').textContent='Goal 10,000 · next +10 BP at '+(Math.floor(u.steps/1000)+1)*1000}
-function step(n){if(!S.me)return;const c=walk(n);if(S.view!='app')return;c?draw():paint()}
 let lastT=0,g=9.8,sm=0,prevSm=0,ev=0,nv=0,sens=1.2,acc=null;
-function proc(x,y,z){const m=Math.hypot(x,y,z);g+=(m-g)*.05;sm+=((m-g)-sm)*.4;const t=Date.now();
- if(sm>sens&&prevSm<=sens&&t-lastT>280){lastT=t;step(1)}prevSm=sm;ev++;if(ev%10==0)diag()}
+function proc(x,y,z){const m=Math.hypot(x,y,z);g+=(m-g)*.05;sm+=((m-g)-sm)*.4;const t=Date.now();if(sm>sens&&prevSm<=sens&&t-lastT>280){lastT=t;step(1)}prevSm=sm;ev++;if(ev%10==0)diag()}
 function diag(){const el=document.getElementById('dg');if(el)el.textContent='Readings: '+ev+' · empty events: '+nv+' · signal '+sm.toFixed(2)+' · threshold '+sens.toFixed(1)}
 function onMot(e){const a=e.accelerationIncludingGravity;if(!a||a.x==null){nv++;if(nv%20==1)diag();return}proc(a.x,a.y,a.z)}
 function stopMotion(){removeEventListener('devicemotion',onMot);try{acc&&acc.stop()}catch(e){}acc=null;S.mot=false}
@@ -98,7 +189,6 @@ async function motion(){if(S.mot){stopMotion();S.msg='';return draw()}
  try{if(window.DeviceMotionEvent&&DeviceMotionEvent.requestPermission&&(await DeviceMotionEvent.requestPermission())!=='granted'){S.msg='Motion permission denied.';return draw()}}catch(e){}
  ev=0;nv=0;g=9.8;sm=0;prevSm=0;addEventListener('devicemotion',onMot);S.mot=true;S.msg='Hold the phone and walk. Counting is approximate.';
  setTimeout(()=>{if(S.mot&&ev===0&&window.Accelerometer){try{acc=new Accelerometer({frequency:30});acc.addEventListener('reading',()=>proc(acc.x,acc.y,acc.z));acc.start()}catch(e){}}},1500);
- setTimeout(()=>{if(S.mot&&ev===0){S.msg=nv>0?'The browser is sending empty motion data. In Chrome allow Motion sensors for this site (lock icon > Permissions) and open the https link, not a saved file. Or use Take a step.':'No sensor data received. Open the https link directly in Chrome, not inside another app or as a saved file. Or use Take a step.';draw()}},3800);
- draw()}
+ setTimeout(()=>{if(S.mot&&ev===0){S.msg=nv>0?'The browser sends empty motion data. Allow Motion sensors for this site in Chrome (lock icon, Permissions).':'No sensor data received. Open this page directly in Chrome.';draw()}},3800);draw()}
 draw();
 </script></body></html>
